@@ -1,14 +1,13 @@
 package org.example;
 
-import com.google.gson.Gson;
+import com.github.lalyos.jfiglet.FigletFont;
+import java.io.IOException;
 
 public class Main {
-    static void main() {
-        Estudiante estudiante = new Estudiante("Valerii", 19);
-        Gson gson = new Gson();
-        String json = gson.toJson(estudiante);
+    public static void main(String[] args) throws IOException {
+        String nombreEstudiante = "Valerii";
+        String estudianteAscii = FigletFont.convertOneLine(nombreEstudiante);
 
-        System.out.println(json);
-
+        System.out.println(estudianteAscii);
     }
 }
